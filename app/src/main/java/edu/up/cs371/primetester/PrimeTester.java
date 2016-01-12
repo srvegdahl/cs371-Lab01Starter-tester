@@ -1,5 +1,7 @@
 package edu.up.cs371.primetester;
 
+import android.util.Log;
+
 /**
  * Created by vegdahl on 7/17/2015.
  *
@@ -18,6 +20,7 @@ public class PrimeTester {
         if (n % 2 == 0) return n == 2;
         // for now, return a random result
         for (int i = 3; i*i <= n; i += 2) {
+            Log.i("isPrime", "" + i);
             if (n % i == 0) return false;
         }
         return true;
